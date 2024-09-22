@@ -1,17 +1,16 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { navLinks } from '../constants'
+import Button from './Button'
 
 const Navbar = () => {
   return (
     <nav className='navbar'>
       <div className="navbar-container">
-        <div>
-          <NavLink to='/'>
-            <span className='navbar-logo'>LOGO</span>
-          </NavLink>
-        </div>
-
+        <NavLink to='/'>
+          <span className='navbar-logo'>LOGO</span>
+        </NavLink>
+  
         <ul className='nav-links'>
           {navLinks.map(item => (
             <li key={item.id}>
@@ -19,8 +18,8 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-
-        <button className='btn btn-primary'>Contact Us</button>
+        
+        <Button classList='btn btn-primary' btnTitle='Contact Us'/>
       </div>
     </nav>
   )

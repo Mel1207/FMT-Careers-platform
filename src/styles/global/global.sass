@@ -21,3 +21,56 @@ a
 
 ul
   list-style: none
+
+// HEADER
+.header 
+  padding: 105px 20px
+
+  h1 
+    font-size: 55px
+    color: $cBlack
+    font-weight: 800
+    margin-bottom: 15px
+    text-align: center
+
+  p 
+    font-size: 14px
+    line-height: 25px
+    color: $cBlack
+    text-align: center
+    margin-bottom: 40px
+
+  .tag 
+    font-size: 14px
+    padding: 7px 12px
+    border-radius: 30px
+    border: 1px solid $cBlue
+    color: $cBlue
+    width: max-content
+    margin: 0 auto
+
+  .header-banner 
+    position: relative
+    max-width: 780px
+    height: 422px
+    background: url('../assets/img-header-banner.jpg')
+    background-size: cover
+    border-radius: 30px
+    display: flex 
+    align-items: center
+    justify-content: center
+    margin: auto
+
+    img 
+      position: relative
+
+    &::before
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      width: 100%
+      background: rgba(0, 0, 0, .40)
+      border-radius: 30px
+      
