@@ -51,6 +51,33 @@
   display: flex;
   gap: 30px;
 }
+.navbar .nav-links a {
+  color: #282943;
+}
+.navbar .nav-links a.active {
+  color: #424BD1;
+}
+
+.navbar-admin {
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  background: #ffffff;
+  margin-left: 280px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+  position: fixed;
+  width: 280px;
+  height: 100vh;
+  background: #ffffff;
+  left: 0;
+  top: 0;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
 
 *, html {
   margin: 0;
