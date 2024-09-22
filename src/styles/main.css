@@ -22,11 +22,16 @@
 }
 
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
   height: 60px;
   width: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
+  background: #ffffff;
+  z-index: 10;
 }
 .navbar .navbar-container {
   width: 100%;
@@ -71,6 +76,10 @@ a {
 
 ul {
   list-style: none;
+}
+
+.app {
+  padding-top: 60px;
 }
 
 .header {
@@ -123,6 +132,28 @@ ul {
   width: 100%;
   background: rgba(0, 0, 0, 0.4);
   border-radius: 30px;
+}
+
+.section-1 {
+  padding: 100px 0;
+  background: #F9F9F9;
+}
+.section-1 h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #282943;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.section-1 h2 span {
+  color: #424BD1;
+}
+.section-1 p {
+  font-size: 14px;
+  line-height: 25px;
+  color: #282943;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 /*# sourceMappingURL=main.css.map */
