@@ -64,10 +64,58 @@
   height: 60px;
   width: 100%;
   background: #ffffff;
-  margin-left: 280px;
+  padding-left: 280px;
   display: flex;
   align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.navbar-admin .navbar-admin-container {
+  padding: 0 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-admin .navbar-left {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.navbar-admin button {
+  background: none;
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.navbar-admin .greetings {
+  font-weight: 800;
+  color: #282943;
+}
+.navbar-admin .account {
+  display: flex;
+  gap: 10px;
+}
+.navbar-admin .account .avatar {
+  height: 40px;
+  width: 40px;
+  background: #424BD1;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+}
+.navbar-admin .account-details .account-name {
+  font-size: 14px;
+  font-weight: 800;
+  color: #282943;
+}
+.navbar-admin .account-details .account-role {
+  font-size: 12px;
+  font-weight: 400;
+  colo: rgba(40, 41, 67, 0.7);
 }
 
 .sidebar {
@@ -78,6 +126,20 @@
   left: 0;
   top: 0;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+.sidebar .sidebar-logo {
+  height: 60px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+.sidebar .sidebar-logo span {
+  font-size: 25px;
+  font-weight: 800;
+  color: #282943;
+}
+.sidebar .sidebar-tabs {
+  padding: 30px 20px 20px 20px;
 }
 
 .tab-filter {
