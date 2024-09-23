@@ -10,8 +10,8 @@ const Accordion = ({ title, content }) => {
   }
 
   return (
-    <div className='acc-item'>
-      <div onClick={toggleAcc} className='acc-head'>
+    <div className='acc-item' onClick={toggleAcc}>
+      <div className='acc-head'>
         <p className='acc-title'>{title}</p>
         {isOpen ? <button className='acc-btn'>-</button> : <button className='acc-btn'>+</button>}
       </div>
