@@ -8,7 +8,7 @@ const Navbar = () => {
 
   console.log(location.pathname)
   return (
-    <nav className={location.pathname !== '/main-admin' ? 'navbar' : 'd-none'}>
+    <nav className='navbar'>
       <div className="navbar-container">
         <NavLink to='/'>
           <span className='navbar-logo'>LOGO</span>

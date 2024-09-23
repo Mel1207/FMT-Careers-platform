@@ -80,6 +80,34 @@
   border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.tab-filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.tab-filter .tab-items {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 75px;
+}
+.tab-filter .tab-item {
+  padding: 7px 12px;
+  font-size: 14px;
+  color: #424BD1;
+  border: 1px solid #424BD1;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.tab-filter .tab-item:hover {
+  background: rgba(66, 75, 209, 0.1);
+}
+.tab-filter .tab-item.active {
+  background: #424BD1;
+  color: #ffffff;
+}
+
 *, html {
   margin: 0;
   padding: 0;
@@ -108,10 +136,6 @@ ul {
 
 .app {
   padding-top: 60px;
-}
-
-.d-none {
-  display: none !important;
 }
 
 .header {

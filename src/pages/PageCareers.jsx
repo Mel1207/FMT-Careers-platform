@@ -1,6 +1,6 @@
 import React from 'react'
 import iconPlay from '../assets/icon-play.svg'
-import Button from '../components/Button'
+import TabFilter from '../components/TabFilter'
 
 const PageCareers = () => {
   return (
@@ -18,6 +18,7 @@ const PageCareers = () => {
         <div className="container">
           <h2>Our <span>Openings</span></h2>
           <p>Explore new career opportunities with us. Join a dynamic, <br /> innovative, and growing team today!</p>
+          <TabFilter />
         </div>
       </section>
     </>

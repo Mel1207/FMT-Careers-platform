@@ -15,3 +15,22 @@ export const navLinks = [
     linkPath: '/careers'
   },
 ]
+
+export const tabItems = [
+  {
+    id: 1,
+    tabTitle: 'All openings'
+  },
+  {
+    id: 2,
+    tabTitle: 'Software Engineers'
+  },
+  {
+    id: 3,
+    tabTitle: 'Quality Assurance'
+  },
+  {
+    id: 4,
+    tabTitle: 'Designers'
+  },
+]

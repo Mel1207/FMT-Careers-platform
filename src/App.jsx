@@ -4,11 +4,14 @@ import PageCareers from "./pages/PageCareers"
 import PageHome from "./pages/PageHome"
 import PageAbout from "./pages/PageAbout"
 import PageAdmin from "./pages/PageAdmin"
+import NavbarAdmin from "./components/NavbarAdmin"
 
 function App() {
+  const location = useLocation()
+
   return (
     <>
-      <Navbar />
+      {location.pathname !== '/main-admin' ? <Navbar /> : <NavbarAdmin />}
       <div className="app">
         <Routes>
           <Route path="/" exact element={<PageHome />} />
