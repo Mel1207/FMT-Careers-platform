@@ -1,4 +1,6 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
+import { sidebarLinks } from '../constants'
 
 const Sidebar = () => {
   return (
@@ -7,9 +9,13 @@ const Sidebar = () => {
         <span>FMT Admin</span>
       </div>
       <div className="sidebar-tabs">
-        <h1>job post</h1>
-        <h1>job post</h1>
-        <h1>job post</h1>
+        {sidebarLinks.map(item => (
+          <NavLink key={item.id} to={item.path} className='sidebar-link'>
+            <img src={item.iconWhite} alt="active" />
+            {item.title}
+          </NavLink>
+        ))}
+        
       </div>
     </div>
   )

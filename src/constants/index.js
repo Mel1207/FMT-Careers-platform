@@ -1,4 +1,7 @@
-import { useState } from "react"
+import iconJobWhite from '../assets/icon-job-white.svg'
+import iconJobBlack from '../assets/icon-job-black.svg'
+import iconFileWhite from '../assets/icon-file-white.svg'
+import iconFileBlack from '../assets/icon-file-black.svg'
 
 export const navLinks = [
   {
@@ -73,5 +76,29 @@ export const offices = [
     id: 3,
     office: 'Philippines Office',
     address: 'H.V. Dela Costa, Makati 1227 Metro Manila'
+  },
+]
+
+export const sidebarLinks = [
+  {
+    id: 1,
+    title: 'Job Post',
+    path: '/main-admin',
+    iconWhite: iconJobWhite,
+    iconBlack: iconJobBlack
+  },
+  {
+    id: 2,
+    title: 'Page 2',
+    path: '/page-2',
+    iconWhite: iconFileWhite,
+    iconBlack: iconFileBlack
+  },
+  {
+    id: 3,
+    title: 'Page 3',
+    path: '/page-3',
+    iconWhite: iconFileWhite,
+    iconBlack: iconFileBlack
   },
 ]
