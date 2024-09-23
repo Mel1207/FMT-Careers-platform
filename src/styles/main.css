@@ -108,6 +108,39 @@
   color: #ffffff;
 }
 
+.accordion .acc-item {
+  padding: 24px;
+  background: #F9F9F9;
+  border-radius: 18px;
+  margin-bottom: 24px;
+}
+.accordion .acc-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.accordion .acc-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #282943;
+}
+.accordion .acc-content {
+  padding: 20px 0 0 0;
+  font-size: 16px;
+  line-height: 25px;
+  color: #282943;
+}
+.accordion .acc-btn {
+  background: #ffffff;
+  height: 54px;
+  width: 54px;
+  border-radius: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 30px;
+  font-weight: 300;
+  font-family: inherit;
+}
+
 *, html {
   margin: 0;
   padding: 0;
@@ -210,6 +243,30 @@ ul {
   color: #282943;
   text-align: center;
   margin-bottom: 40px;
+}
+
+.section-2 {
+  padding: 100px 0;
+}
+.section-2 .container {
+  display: grid;
+  grid-template-columns: 1fr 600px;
+  gap: 20px;
+}
+.section-2 h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #282943;
+  text-align: left;
+  margin-bottom: 15px;
+}
+.section-2 h2 span {
+  color: #424BD1;
+}
+
+.footer {
+  padding: 80px 0;
+  background: #F9F9F9;
 }
 
 /*# sourceMappingURL=main.css.map */

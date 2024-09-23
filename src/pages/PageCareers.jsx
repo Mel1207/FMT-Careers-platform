@@ -1,6 +1,8 @@
 import React from 'react'
 import iconPlay from '../assets/icon-play.svg'
 import TabFilter from '../components/TabFilter'
+import Accordion from '../components/Accordion'
+import { accItems } from '../constants'
 
 const PageCareers = () => {
   return (
@@ -21,6 +23,21 @@ const PageCareers = () => {
           <TabFilter />
         </div>
       </section>
+
+      <section className="section-2">
+        <div className="container">
+          <h2>Frequently Asked <br /> <span>Questions</span></h2>
+          <div className="accordion">
+            {accItems.map(item => <Accordion key={item.id} title={item.accTitle} content={item.accContent}/>)}
+          </div>
+        </div>
+      </section>
+
+      <footer className='footer'>
+        <div className="container">
+          <h1>footer</h1>
+        </div>
+      </footer>
     </>
     
   )
