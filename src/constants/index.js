@@ -57,3 +57,21 @@ export const accItems = [
     isOpen: false
   },
 ]
+
+export const offices = [
+  {
+    id: 1,
+    office: 'San Francisco Office',
+    address: 'Diamond Heights Blvd San Francisco, CA.'
+  },
+  {
+    id: 2,
+    office: 'Japan Office',
+    address: 'Daikanyamacho, Shibuya City, Tokyo'
+  },
+  {
+    id: 3,
+    office: 'Philippines Office',
+    address: 'H.V. Dela Costa, Makati 1227 Metro Manila'
+  },
+]

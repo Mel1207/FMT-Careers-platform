@@ -2,7 +2,9 @@ import React from 'react'
 import iconPlay from '../assets/icon-play.svg'
 import TabFilter from '../components/TabFilter'
 import Accordion from '../components/Accordion'
-import { accItems } from '../constants'
+import { accItems, offices } from '../constants'
+import iconEmail from '../assets/icon-email.svg'
+import iconPhone from '../assets/icon-phone.svg'
 
 const PageCareers = () => {
   return (
@@ -32,14 +34,30 @@ const PageCareers = () => {
           </div>
         </div>
       </section>
-
+      
       <footer className='footer'>
         <div className="container">
-          <h1>footer</h1>
+          <div className='footer-top'>
+            <h3>Contact Us</h3>
+            <p className='contact-info'><img src={iconEmail} alt="Email" />hello@fmt.techno</p>
+            <p className='contact-info'><img src={iconPhone} alt="Phone" />+1 (510) 680-3749</p>
+          </div>
+          <div className='footer-bottom'>
+            <div>
+              <h3 className='footer-logo'>FMT-LOGO</h3>
+              <p>FMT is the trusted software development partner for game-changing startups.</p>
+            </div>
+            {offices.map(item => (
+              <div key={item.id}>
+                <h3>{item.office}</h3>
+                <p>{item.address}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </footer>
     </>
-    
+
   )
 }
 

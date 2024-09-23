@@ -4,7 +4,55 @@
   height: 60px
   width: 100%
   background: $cWhite
-  margin-left: 280px
+  padding-left: 280px
   display: flex 
   align-items: center
   border-bottom: 1px solid rgba(0, 0, 0, .10)
+
+  .navbar-admin-container
+    padding: 0 20px 
+    width: 100%
+    display: flex 
+    justify-content: space-between 
+    align-items: center
+
+  .navbar-left
+    display: flex 
+    gap: 15px
+    align-items: center
+
+  button
+    background: none
+    outline: none
+    border: none 
+    display: flex 
+    align-items: center
+    cursor: pointer
+
+  .greetings
+    font-weight: 800
+    color: $cBlack
+
+  .account 
+    display: flex 
+    gap: 10px
+
+    .avatar
+      height: 40px
+      width: 40px
+      background: $cBlue
+      color: $cWhite
+      display: flex 
+      align-items: center
+      justify-content: center
+      border-radius: 40px
+
+  .account-details
+    .account-name 
+      font-size: 14px
+      font-weight: 800
+      color: $cBlack
+    .account-role
+      font-size: 12px 
+      font-weight: 400
+      colo: rgba($cBlack, .7)
