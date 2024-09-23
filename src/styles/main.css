@@ -252,6 +252,35 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.modal {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal .modal-container {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
+  width: 630px;
+}
+.modal .modal-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.modal .modal-title p {
+  font-size: 18px;
+  font-weight: 800;
+  color: #282943;
+}
+
 *, html {
   margin: 0;
   padding: 0;

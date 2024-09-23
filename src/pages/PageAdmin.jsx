@@ -2,6 +2,7 @@ import React from 'react'
 import Sidebar from '../components/Sidebar'
 import NavbarAdmin from '../components/NavbarAdmin'
 import Button from '../components/Button'
+import Modal from '../components/Modal'
 
 const PageAdmin = () => {
   return (
@@ -48,7 +49,7 @@ const PageAdmin = () => {
           </div>
         </div>
       </main>
-      
+      <Modal modalTitle='New Job Post'/>
     </> 
   )
 }
