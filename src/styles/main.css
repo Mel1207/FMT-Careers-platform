@@ -60,6 +60,7 @@
 
 .navbar-admin {
   position: fixed;
+  top: 0;
   height: 60px;
   width: 100%;
   background: #ffffff;
@@ -107,6 +108,10 @@ ul {
 
 .app {
   padding-top: 60px;
+}
+
+.d-none {
+  display: none !important;
 }
 
 .header {
