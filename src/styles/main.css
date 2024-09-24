@@ -21,6 +21,15 @@
   background: rgba(66, 75, 209, 0.3);
 }
 
+.btn-outline-secondary {
+  border: 1px solid #A4A4A4;
+  color: #A4A4A4;
+}
+.btn-outline-secondary:hover {
+  border-color: #535353;
+  color: #535353;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -250,6 +259,78 @@
   gap: 20px;
   grid-template-columns: 250px 200px 100px 100px 1fr;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modal {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal .modal-container {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
+  width: 630px;
+  overflow: hidden;
+}
+.modal .modal-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.modal .modal-title p {
+  font-size: 18px;
+  font-weight: 800;
+  color: #282943;
+}
+.modal .form-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+.modal .form-group label {
+  font-size: 14px;
+  font-weight: 800;
+  display: block;
+  margin-bottom: 8px;
+}
+.modal .form-group input, .modal .form-group select {
+  width: 100%;
+  padding: 0 15px;
+  height: 45px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-family: inherit;
+}
+.modal .form-group select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+}
+.modal .form-group .arrow-down {
+  position: absolute;
+  right: 15px;
+  top: 40px;
+}
+.modal .form-group textarea {
+  padding: 15px;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  height: 160px;
+  font-family: inherit;
+}
+.modal .modal-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
 }
 
 *, html {
