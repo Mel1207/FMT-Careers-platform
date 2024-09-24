@@ -3,8 +3,11 @@ import Sidebar from '../components/Sidebar'
 import NavbarAdmin from '../components/NavbarAdmin'
 import Button from '../components/Button'
 import Modal from '../components/Modal'
+import { useGlobalStore } from '../store/globalStore'
 
 const PageAdmin = () => {
+  const { isModalOpen, openModal } = useGlobalStore()
+  
   return (
     <>
       <NavbarAdmin />
@@ -13,7 +16,7 @@ const PageAdmin = () => {
         <div className='container'>
           <div className='page-title'>
             <h2>Job Postings</h2>
-            <Button classList='btn btn-primary' btnTitle='New Job Post'/>
+            <Button classList='btn btn-primary' btnTitle='New Job Post' onClick={openModal}/>
           </div>
           <div className="table">
             <div className="t-head">
@@ -49,7 +52,7 @@ const PageAdmin = () => {
           </div>
         </div>
       </main>
-      <Modal modalTitle='New Job Post'/>
+      {isModalOpen && <Modal modalTitle='New Job Post'/>}
     </> 
   )
 }

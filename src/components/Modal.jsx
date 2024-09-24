@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import iconClose from '../assets/icon-close.svg'
 import Button from './Button'
 import iconArrowDown from '../assets/icon-arrow-down.svg'
+import { useGlobalStore } from '../store/globalStore'
 
 const Modal = ({modalTitle}) => {
   const [jobTitle, setJobTitle] = useState('')
@@ -11,6 +12,8 @@ const Modal = ({modalTitle}) => {
   const [applicationLink, setApplicationLink] = useState('')
   const [description, setDescription] = useState('')
 
+  const { closeModal } = useGlobalStore()
+
   const handleSubmit = () => {
     console.log(jobTitle)
     console.log(category)
@@ -18,6 +21,7 @@ const Modal = ({modalTitle}) => {
     console.log(status)
     console.log(applicationLink)
     console.log(description)
+    closeModal()
   }
 
   return (
@@ -26,7 +30,7 @@ const Modal = ({modalTitle}) => {
         <p>{description}</p>
         <div className="modal-title">
           <p>{modalTitle}</p>
-          <img src={iconClose} alt="close" />
+          <img src={iconClose} alt="close" onClick={closeModal}/>
         </div>
         <div className="modal-content">
           <div className="form-group">
@@ -37,23 +41,25 @@ const Modal = ({modalTitle}) => {
               onChange={e => setJobTitle(e.target.value)}
             />
           </div>
-          <div className="form-group">
-            <label>Category</label>
-            <select onChange={e => setCategory(e.target.value)}>
-              <option>Select category</option>
-              <option value='software-engineers'>Software Engineers</option>
-              <option value='designers'>Designers</option>
-              <option value='quality-assurance'>Quality assurance</option>
-            </select>
-            <img src={iconArrowDown} alt="Chevron down" className='arrow-down'/>
-          </div>
-          <div className="form-group">
-            <label>Type</label>
-            <select onChange={e => setType(e.target.value)}>
-              <option value='full-time'>Full-time</option>
-              <option value='part-time'>Part-time</option>
-            </select>
-            <img src={iconArrowDown} alt="Chevron down" className='arrow-down'/>
+          <div className='d-flex'>
+            <div className="form-group">
+              <label>Category</label>
+              <select onChange={e => setCategory(e.target.value)}>
+                <option>Select category</option>
+                <option value='software-engineers'>Software Engineers</option>
+                <option value='designers'>Designers</option>
+                <option value='quality-assurance'>Quality assurance</option>
+              </select>
+              <img src={iconArrowDown} alt="Chevron down" className='arrow-down'/>
+            </div>
+            <div className="form-group">
+              <label>Type</label>
+              <select onChange={e => setType(e.target.value)}>
+                <option value='full-time'>Full-time</option>
+                <option value='part-time'>Part-time</option>
+              </select>
+              <img src={iconArrowDown} alt="Chevron down" className='arrow-down'/>
+            </div>
           </div>
           <div className="form-group">
             <label>Status</label>
@@ -77,7 +83,7 @@ const Modal = ({modalTitle}) => {
           </div>
         </div>
         <div className="modal-footer" >
-          <Button btnTitle='Cancel' classList='btn btn-outline-secondary'/>
+          <Button btnTitle='Cancel' classList='btn btn-outline-secondary' onClick={closeModal}/>
           <Button onClick={handleSubmit} btnTitle='Submit' classList='btn btn-primary' />
         </div>
       </div>
