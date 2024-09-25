@@ -3,26 +3,37 @@ import iconClose from '../assets/icon-close.svg'
 import Button from './Button'
 import iconArrowDown from '../assets/icon-arrow-down.svg'
 import { useGlobalStore } from '../store/globalStore'
+import { useAddJobPost } from '../hooks/useAddJobPost'
 
 const Modal = ({modalTitle}) => {
   const [jobTitle, setJobTitle] = useState('')
   const [category, setCategory] = useState('')
   const [type, setType] = useState('full-time')
-  const [status, setStatus] = useState('open')
+  const [jobStatus, setJobStatus] = useState('open')
   const [applicationLink, setApplicationLink] = useState('')
   const [description, setDescription] = useState('')
 
   const { closeModal } = useGlobalStore()
+  const { addJobPost } = useAddJobPost()
 
   const handleSubmit = () => {
     console.log(jobTitle)
     console.log(category)
     console.log(type)
-    console.log(status)
+    console.log(jobStatus)
     console.log(applicationLink)
     console.log(description)
+    addJobPost({
+      jobTitle,
+      category,
+      type,
+      jobStatus,
+      applicationLink,
+      description
+    })
     closeModal()
   }
+  
 
   return (
     <div className='modal'>
@@ -63,7 +74,7 @@ const Modal = ({modalTitle}) => {
           </div>
           <div className="form-group">
             <label>Status</label>
-            <select onChange={e => setStatus(e.target.value)}>
+            <select onChange={e => setJobStatus(e.target.value)}>
               <option value='open'>Open</option>
               <option value='close'>Closed</option>
             </select>

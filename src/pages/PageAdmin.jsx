@@ -4,10 +4,15 @@ import NavbarAdmin from '../components/NavbarAdmin'
 import Button from '../components/Button'
 import Modal from '../components/Modal'
 import { useGlobalStore } from '../store/globalStore'
+import { useGetJobPost } from '../hooks/useGetJobPost'
 
 const PageAdmin = () => {
+  // HOOKS CALL
+  const { jobPost, getJobPost } = useGetJobPost()
+
+  // GLOBAL STATE
   const { isModalOpen, openModal } = useGlobalStore()
-  
+  console.log(jobPost)
   return (
     <>
       <NavbarAdmin />
@@ -50,6 +55,15 @@ const PageAdmin = () => {
               </div>
             </div>
           </div>
+          <div className='test'>
+            <h1>test</h1>
+            {jobPost.map(item => (
+              <div key={item.id}>
+                <p>{item.jobTitle}</p>
+                <p>{item.category}</p>
+              </div>
+            ))}
+          </div>  
         </div>
       </main>
       {isModalOpen && <Modal modalTitle='New Job Post'/>}

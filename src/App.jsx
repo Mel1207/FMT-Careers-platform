@@ -6,10 +6,11 @@ import PageAbout from "./pages/PageAbout"
 import PageAdmin from "./pages/PageAdmin"
 import NavbarAdmin from "./components/NavbarAdmin"
 
+
 function App() {
   const location = useLocation()
-
-  return (
+  
+  return (  
     <>
       {location.pathname !== '/main-admin' ? <Navbar /> : <NavbarAdmin />}
       <div className="app">
