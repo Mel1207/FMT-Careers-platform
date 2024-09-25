@@ -111,7 +111,7 @@ export const jobPost = [
     description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using.',
     type: 'Full time',
     location: 'Makati Philippines',
-    setup: 'Remote'
+    setup: 'Remote',
   },
   {
     id: 2,
@@ -120,7 +120,7 @@ export const jobPost = [
     description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using.',
     type: 'Full time',
     location: 'Makati Philippines',
-    setup: 'Remote'
+    setup: 'Remote',
   },
   {
     id: 3,
@@ -129,7 +129,7 @@ export const jobPost = [
     description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using.',
     type: 'Part time',
     location: 'San Francisco California',
-    setup: 'Hybrid'
+    setup: 'Hybrid',
   },
   {
     id: 4,
@@ -138,7 +138,7 @@ export const jobPost = [
     description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using.',
     type: 'Full time',
     location: 'Makati, Philippines',
-    setup: 'Onsite'
+    setup: 'Onsite',
   },
   {
     id: 5,
@@ -147,6 +147,6 @@ export const jobPost = [
     description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using.',
     type: 'Part time',
     location: 'Makati, Philippines',
-    setup: 'remote'
+    setup: 'remote',
   },
 ]

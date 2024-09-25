@@ -3,8 +3,11 @@ import Sidebar from '../components/Sidebar'
 import NavbarAdmin from '../components/NavbarAdmin'
 import Button from '../components/Button'
 import Modal from '../components/Modal'
+import IconRemove from '../assets/icon-remove.svg'
 import { useGlobalStore } from '../store/globalStore'
-import { useGetJobPost } from '../hooks/useGetJobPost'
+import { jobPost } from '../constants'
+// import { useGetJobPost } from '../hooks/useGetJobPost'
+
 
 const PageAdmin = () => {
   // HOOKS CALL
@@ -28,31 +31,19 @@ const PageAdmin = () => {
               <p>Job title</p>
               <p>Category</p>
               <p>Type</p>
-              <p>Status</p>
+              <p>Location</p>
               <div></div>
             </div>
             <div className="t-body">
-              <div className="t-row">
-                <p>Job title</p>
-                <p>Category</p>
-                <p>Type</p>
-                <p>Status</p>
-                <div></div>
-              </div>
-              <div className="t-row">
-                <p>Job title</p>
-                <p>Category</p>
-                <p>Type</p>
-                <p>Status</p>
-                <div></div>
-              </div>
-              <div className="t-row">
-                <p>Job title</p>
-                <p>Category</p>
-                <p>Type</p>
-                <p>Status</p>
-                <div></div>
-              </div>
+              {jobPost.map(item => (
+                <div className="t-row" key={item.id}>
+                  <p>{item.jobTitle}</p>
+                  <p className='table-category'>{item.category}</p>
+                  <p>{item.type}</p>
+                  <p className='table-location'>{item.location}</p>
+                  <div className='remove-job-item'>Remove<img src={IconRemove} alt="remove" /></div>
+                </div>
+              ))}
             </div>
           </div>
           {/* <div className='test'>
