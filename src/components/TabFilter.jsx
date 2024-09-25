@@ -9,6 +9,8 @@ const TabFilter = () => {
   // LOCAL STATE
   const [currentTab, setCurrentTab] = useState(1)
   const [seList, setSeList] = useState([])
+  const [qaList, setQaList] = useState([])
+  const [deList, setDeList] = useState([])
 
   // HOOKS CALL
   // const { jobPost } = useGetJobPost()
@@ -17,18 +19,26 @@ const TabFilter = () => {
     setCurrentTab(id)
   }
 
-  
-
-  const filterSe = () => {
+  const filterSoftwareEngineers = () => {
     const newList = jobPost.filter(item => item.category === 'software-engineers')
     setSeList(newList)
-    console.log(newList)
   } 
 
+  const filterQualityAssurance = () => {
+    const newList = jobPost.filter(item => item.category === 'quality-assurance')
+    setQaList(newList)
+  }
+
+  const filterDesigners = () => {
+    const newList = jobPost.filter(item => item.category === 'designers')
+    setDeList(newList)
+  }
+
   useEffect(() => {
-    filterSe()
+    filterSoftwareEngineers()
+    filterQualityAssurance()
+    filterDesigners()
   }, [])
-  // filterSe()
 
   return (
     <div className="tab-filter">
@@ -41,16 +51,7 @@ const TabFilter = () => {
         {currentTab === 1 && (
           <div className="job-list">
             {jobPost.map(item => (
-              <div key={item.id} className='card-job'>
-                <p className="job-title">{item.jobTitle}</p>
-                <div className='job-details'>
-                  <p className='detail-item'>{item.type}</p>
-                  <p className='detail-item'>{item.setup}</p>
-                  <p className='detail-item'>{item.location}</p>
-                </div>
-                <p className='job-description'>{item.description}</p>
-                <Button btnTitle='Learn More' classList='btn btn-primary' btnicon={IconView}/>
-              </div>
+              <JobCard key={item.id} jobTitle={item.jobTitle} type={item.type} setup={item.setup} location={item.location} description={item.description}/>
             ))}
           </div>
         )}
@@ -58,18 +59,24 @@ const TabFilter = () => {
           <div className="job-list">
             {seList.map(item => (
               <JobCard key={item.id} jobTitle={item.jobTitle} type={item.type} setup={item.setup} location={item.location} description={item.description}/>
-              // <div key={item.id} className='card-job'>
-              //   <p className="job-title">{item.jobTitle}</p>
-              //   <p>{item.description}</p>
-              //   <Button btnTitle='Learn More' classList='btn btn-primary' btnicon={IconView}/>
-              // </div>
             ))}
           </div>
         )}
-        {currentTab === 3 && <h1>Tab contents 3 </h1>}
-        {currentTab === 4 && <h1>Tab contents 4 </h1>}
+        {currentTab === 3 && (
+          <div className='job-list'>
+            {qaList.map(item => (
+              <JobCard key={item.id} jobTitle={item.jobTitle} type={item.type} setup={item.setup} location={item.location} description={item.description}/>
+            ))}
+          </div>
+        )}
+        {currentTab === 4 && (
+          <div className="job-list">
+            {deList.map(item => (
+              <JobCard key={item.id} jobTitle={item.jobTitle} type={item.type} setup={item.setup} location={item.location} description={item.description}/>
+            ))}
+          </div>
+        )}
       </div>
-  
     </div>
   )
 }
