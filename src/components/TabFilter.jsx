@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { jobPost, tabItems } from '../constants'
 // import { useGetJobPost } from '../hooks/useGetJobPost'
-import Button from './Button'
-import IconView from '../assets/icon-view.svg'
 import JobCard from './JobCard'
 
 const TabFilter = () => {
