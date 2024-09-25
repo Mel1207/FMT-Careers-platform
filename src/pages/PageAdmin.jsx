@@ -15,7 +15,11 @@ const PageAdmin = () => {
 
   // GLOBAL STATE
   const { isModalOpen, openModal } = useGlobalStore()
-  // console.log(jobPost)
+  
+  // FUNCTIONS
+  const handleDeleteJob = (id) => {
+    console.log(`your target doc is ${id}`)
+  } 
   return (
     <>
       <NavbarAdmin />
@@ -41,7 +45,7 @@ const PageAdmin = () => {
                   <p className='table-category'>{item.category}</p>
                   <p>{item.type}</p>
                   <p className='table-location'>{item.location}</p>
-                  <div className='remove-job-item'>Remove<img src={IconRemove} alt="remove" /></div>
+                  <div className='remove-job-item' onClick={() => handleDeleteJob(item.id)}>Remove<img src={IconRemove} alt="remove" /></div>
                 </div>
               ))}
             </div>
