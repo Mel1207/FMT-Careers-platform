@@ -3,6 +3,7 @@ import { jobPost, tabItems } from '../constants'
 // import { useGetJobPost } from '../hooks/useGetJobPost'
 import Button from './Button'
 import IconView from '../assets/icon-view.svg'
+import JobCard from './JobCard'
 
 const TabFilter = () => {
   // LOCAL STATE
@@ -56,11 +57,12 @@ const TabFilter = () => {
         {currentTab === 2 && (
           <div className="job-list">
             {seList.map(item => (
-              <div key={item.id} className='card-job'>
-                <p className="job-title">{item.jobTitle}</p>
-                <p>{item.description}</p>
-                <Button btnTitle='Learn More' classList='btn btn-primary' btnicon={IconView}/>
-              </div>
+              <JobCard key={item.id} jobTitle={item.jobTitle} type={item.type} setup={item.setup} location={item.location} description={item.description}/>
+              // <div key={item.id} className='card-job'>
+              //   <p className="job-title">{item.jobTitle}</p>
+              //   <p>{item.description}</p>
+              //   <Button btnTitle='Learn More' classList='btn btn-primary' btnicon={IconView}/>
+              // </div>
             ))}
           </div>
         )}
