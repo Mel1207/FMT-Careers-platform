@@ -8,11 +8,11 @@ import { useGetJobPost } from '../hooks/useGetJobPost'
 
 const PageAdmin = () => {
   // HOOKS CALL
-  const { jobPost, getJobPost } = useGetJobPost()
+  // const { jobPost, getJobPost } = useGetJobPost()
 
   // GLOBAL STATE
   const { isModalOpen, openModal } = useGlobalStore()
-  console.log(jobPost)
+  // console.log(jobPost)
   return (
     <>
       <NavbarAdmin />
@@ -55,7 +55,7 @@ const PageAdmin = () => {
               </div>
             </div>
           </div>
-          <div className='test'>
+          {/* <div className='test'>
             <h1>test</h1>
             {jobPost.map(item => (
               <div key={item.id}>
@@ -63,7 +63,7 @@ const PageAdmin = () => {
                 <p>{item.category}</p>
               </div>
             ))}
-          </div>  
+          </div>   */}
         </div>
       </main>
       {isModalOpen && <Modal modalTitle='New Job Post'/>}

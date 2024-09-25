@@ -4,8 +4,10 @@ import Button from './Button'
 import iconArrowDown from '../assets/icon-arrow-down.svg'
 import { useGlobalStore } from '../store/globalStore'
 import { useAddJobPost } from '../hooks/useAddJobPost'
+import { useGetJobPost } from '../hooks/useGetJobPost'
 
 const Modal = ({modalTitle}) => {
+  // LOCAL STATE
   const [jobTitle, setJobTitle] = useState('')
   const [category, setCategory] = useState('')
   const [type, setType] = useState('full-time')
@@ -13,16 +15,13 @@ const Modal = ({modalTitle}) => {
   const [applicationLink, setApplicationLink] = useState('')
   const [description, setDescription] = useState('')
 
+  // GLOBAL STATE
   const { closeModal } = useGlobalStore()
+  const { getJobPost } = useGetJobPost()
   const { addJobPost } = useAddJobPost()
 
+
   const handleSubmit = () => {
-    console.log(jobTitle)
-    console.log(category)
-    console.log(type)
-    console.log(jobStatus)
-    console.log(applicationLink)
-    console.log(description)
     addJobPost({
       jobTitle,
       category,
@@ -31,6 +30,7 @@ const Modal = ({modalTitle}) => {
       applicationLink,
       description
     })
+    getJobPost()
     closeModal()
   }
   

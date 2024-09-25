@@ -11,6 +11,9 @@
   font-size: 14px;
   cursor: pointer;
   transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .btn-primary {
@@ -261,6 +264,38 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.job-list .card-job {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 30px;
+  width: 740px;
+  margin-bottom: 30px;
+}
+.job-list .card-job .job-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #424BD1;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.job-list .job-details {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.job-list .detail-item {
+  font-size: 14px;
+  color: rgba(40, 41, 67, 0.7);
+  padding: 5px 10px;
+  border-radius: 30px;
+  background: #F9F9F9;
+}
+.job-list .job-description {
+  font-size: 16px;
+  line-height: 25px;
+  margin-bottom: 20px;
+}
+
 .modal {
   position: fixed;
   height: 100vh;
@@ -445,7 +480,7 @@ main {
 .section-1 h2 span {
   color: #424BD1;
 }
-.section-1 p {
+.section-1 .p-text {
   font-size: 14px;
   line-height: 25px;
   color: #282943;

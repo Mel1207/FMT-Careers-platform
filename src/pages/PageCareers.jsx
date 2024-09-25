@@ -21,7 +21,7 @@ const PageCareers = () => {
       <section className='section-1'>
         <div className="container">
           <h2>Our <span>Openings</span></h2>
-          <p>Explore new career opportunities with us. Join a dynamic, <br /> innovative, and growing team today!</p>
+          <p className='p-text'>Explore new career opportunities with us. Join a dynamic, <br /> innovative, and growing team today!</p>
           <TabFilter />
         </div>
       </section>
