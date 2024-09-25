@@ -11,6 +11,9 @@
   font-size: 14px;
   cursor: pointer;
   transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .btn-primary {
@@ -261,6 +264,20 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.job-list .card-job {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 30px;
+  width: 740px;
+  margin-bottom: 30px;
+}
+.job-list .card-job .job-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #424BD1;
+  cursor: pointer;
+}
+
 .modal {
   position: fixed;
   height: 100vh;
@@ -445,7 +462,7 @@ main {
 .section-1 h2 span {
   color: #424BD1;
 }
-.section-1 p {
+.section-1 .p-text {
   font-size: 14px;
   line-height: 25px;
   color: #282943;

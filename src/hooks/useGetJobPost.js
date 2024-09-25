@@ -13,7 +13,7 @@ export const useGetJobPost = () => {
 
   useEffect(() => {
     getJobPost()
-  }, [])
+  }, [jobPost])
 
 
   return {
