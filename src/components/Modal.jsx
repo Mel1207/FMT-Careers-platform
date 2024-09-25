@@ -20,7 +20,6 @@ const Modal = ({modalTitle}) => {
   const { getJobPost } = useGetJobPost()
   const { addJobPost } = useAddJobPost()
 
-
   const handleSubmit = () => {
     addJobPost({
       jobTitle,
@@ -34,7 +33,6 @@ const Modal = ({modalTitle}) => {
     closeModal()
   }
   
-
   return (
     <div className='modal'>
       <div className="modal-container">
