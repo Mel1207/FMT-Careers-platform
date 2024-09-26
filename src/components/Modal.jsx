@@ -11,7 +11,8 @@ const Modal = ({modalTitle}) => {
   const [jobTitle, setJobTitle] = useState('')
   const [category, setCategory] = useState('')
   const [type, setType] = useState('full-time')
-  const [jobStatus, setJobStatus] = useState('open')
+  const [location, setLocation] = useState('')
+  const [setup, setSetup] = useState('remote')
   const [applicationLink, setApplicationLink] = useState('')
   const [description, setDescription] = useState('')
 
@@ -20,23 +21,24 @@ const Modal = ({modalTitle}) => {
   const { getJobPost } = useGetJobPost()
   const { addJobPost } = useAddJobPost()
 
+  // FUNCTION
   const handleSubmit = () => {
     addJobPost({
       jobTitle,
       category,
       type,
-      jobStatus,
+      location,
+      setup,
       applicationLink,
       description
     })
-    getJobPost()
     closeModal()
+    getJobPost()
   }
   
   return (
     <div className='modal'>
       <div className="modal-container">
-        <p>{description}</p>
         <div className="modal-title">
           <p>{modalTitle}</p>
           <img src={iconClose} alt="close" onClick={closeModal}/>
@@ -71,13 +73,22 @@ const Modal = ({modalTitle}) => {
             </div>
           </div>
           <div className="form-group">
-            <label>Status</label>
-            <select onChange={e => setJobStatus(e.target.value)}>
-              <option value='open'>Open</option>
-              <option value='close'>Closed</option>
-            </select>
-            <img src={iconArrowDown} alt="Chevron down" className='arrow-down'/>
+            <label>Location</label>
+            <input 
+              type="text" 
+              placeholder='Enter location' 
+              onChange={e => setLocation(e.target.value)}
+            />
           </div>
+          <div className="form-group">
+              <label>Setup</label>
+              <select onChange={e => setSetup(e.target.value)}>
+                <option value='remote'>Remote</option>
+                <option value='onsite'>Onsite</option>
+                <option value='hybrid'>Hybrid</option>
+              </select>
+              <img src={iconArrowDown} alt="Chevron down" className='arrow-down'/>
+            </div>
           <div className="form-group">
             <label>Application link</label>
             <input 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { jobPost, tabItems } from '../constants'
-// import { useGetJobPost } from '../hooks/useGetJobPost'
+import { tabItems } from '../constants'
+import { useGetJobPost } from '../hooks/useGetJobPost'
 import JobCard from './JobCard'
 
 const TabFilter = () => {
@@ -11,7 +11,7 @@ const TabFilter = () => {
   const [deList, setDeList] = useState([])
 
   // HOOKS CALL
-  // const { jobPost } = useGetJobPost()
+  const { jobPost } = useGetJobPost()
 
   const changeTab = (id) => {
     setCurrentTab(id)

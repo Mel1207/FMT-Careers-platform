@@ -1,5 +1,5 @@
 import { collection, getDocs } from "firebase/firestore"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { db } from "../config/firebase-config"
 
 export const useGetJobPost = () => {
@@ -11,10 +11,7 @@ export const useGetJobPost = () => {
     setJobPost(data.docs.map(item => ({...item.data(), id: item.id})))
   }
 
-  useEffect(() => {
-    getJobPost()
-  }, [jobPost])
-
+  getJobPost()
 
   return {
     jobPost, getJobPost
