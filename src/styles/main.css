@@ -171,13 +171,21 @@
   gap: 10px;
   align-items: center;
 }
+.sidebar .sidebar-link .white-icon {
+  display: none;
+}
 .sidebar .sidebar-link:hover {
-  color: #424BD1;
   background: rgba(66, 75, 209, 0.1);
 }
 .sidebar .sidebar-link.active {
   background: #424BD1;
   color: #ffffff;
+}
+.sidebar .sidebar-link.active .black-icon {
+  display: none;
+}
+.sidebar .sidebar-link.active .white-icon {
+  display: block !important;
 }
 
 .tab-filter {
