@@ -1,5 +1,5 @@
 // import { collection, getDocs } from "firebase/firestore"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 // import { db } from "../config/firebase-config"
 
 export const useGetJobPost = () => {
@@ -10,16 +10,20 @@ export const useGetJobPost = () => {
     // const data = await getDocs(jobCollectionRef)
     // setJobPost(data.docs.map(item => ({...item.data(), id: item.id})))
 
-    try {
-      const res = await fetch('http://localhost:8000/jobPost')
-      const data = await res.json()
-      setJobPost(data)
-    } catch (error) {
-      console.log(error)
-    }
+    // try {
+    //   const res = await fetch('http://localhost:8000/jobPost')
+    //   const data = await res.json()
+    //   setJobPost(data)
+    // } catch (error) {
+    //   console.log(error)
+    // }
+
+    fetch('http://localhost:8000/jobPost').then(res => res.json()).then(data => setJobPost(data))
   }
 
-  getJobPost()
+  useEffect(() => {
+    getJobPost()
+  }, [])
 
   return {
     jobPost, getJobPost
