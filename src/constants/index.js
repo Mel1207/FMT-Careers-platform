@@ -90,7 +90,7 @@ export const sidebarLinks = [
   {
     id: 2,
     title: 'Page 2',
-    path: '/page-2',
+    path: '/careers',
     iconWhite: iconFileWhite,
     iconBlack: iconFileBlack
   },

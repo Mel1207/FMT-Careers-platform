@@ -1,8 +1,11 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import { sidebarLinks } from '../constants'
 
 const Sidebar = () => {
+  const location = useLocation()
+
+  // console.log(location)
   return (
     <div className='sidebar'>
       <div className='sidebar-logo'>
@@ -11,7 +14,8 @@ const Sidebar = () => {
       <div className="sidebar-tabs">
         {sidebarLinks.map(item => (
           <NavLink key={item.id} to={item.path} className='sidebar-link'>
-            <img src={item.iconWhite} alt="active" />
+            <img src={item.iconWhite} alt="active" className='white-icon'/>
+            <img src={item.iconBlack} alt="not" className='black-icon'/>
             {item.title}
           </NavLink>
         ))}
