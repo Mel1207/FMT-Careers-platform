@@ -91,11 +91,13 @@ const Modal = ({modalTitle}) => {
             </div>
           <div className="form-group">
             <label>Application link</label>
-            <input 
-              type="text" 
-              placeholder='Enter application link' 
-              onChange={e => setApplicationLink(e.target.value)}
-            />
+            <select onChange={e => setApplicationLink(e.target.value)}>
+              <option>Select link for</option>
+              <option value='https://forms.gle/GFAWSf96C5BWk9Ft8'>Software Engineers</option>
+              <option value='https://forms.gle/Vrj4nT6xMtD1UNSMA'>Quality Assurance</option>
+              <option value='https://forms.gle/WhUosf6E58YAnUZSA'>Designers</option>
+            </select>
+            <img src={iconArrowDown} alt="Chevron down" className='arrow-down'/>
           </div>
           <div className="form-group">
             <label>Description</label>

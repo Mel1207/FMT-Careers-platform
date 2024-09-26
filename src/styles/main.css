@@ -33,6 +33,10 @@
   color: #535353;
 }
 
+.btn-link {
+  width: max-content;
+}
+
 .navbar {
   position: fixed;
   top: 0;

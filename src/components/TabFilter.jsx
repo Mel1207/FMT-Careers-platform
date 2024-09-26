@@ -36,7 +36,7 @@ const TabFilter = () => {
     filterSoftwareEngineers()
     filterQualityAssurance()
     filterDesigners()
-  }, [])
+  }, [jobPost])
 
   return (
     <div className="tab-filter">
@@ -49,28 +49,28 @@ const TabFilter = () => {
         {currentTab === 1 && (
           <div className="job-list">
             {jobPost.map(item => (
-              <JobCard key={item.id} jobTitle={item.jobTitle} type={item.type} setup={item.setup} location={item.location} description={item.description}/>
+              <JobCard key={item.id} jobTitle={item.jobTitle} type={item.type} setup={item.setup} location={item.location} description={item.description} applicationLink={item.applicationLink}/>
             ))}
           </div>
         )}
         {currentTab === 2 && (
           <div className="job-list">
             {seList.map(item => (
-              <JobCard key={item.id} jobTitle={item.jobTitle} type={item.type} setup={item.setup} location={item.location} description={item.description}/>
+              <JobCard key={item.id} jobTitle={item.jobTitle} type={item.type} setup={item.setup} location={item.location} description={item.description} applicationLink={item.applicationLink}/>
             ))}
           </div>
         )}
         {currentTab === 3 && (
           <div className='job-list'>
             {qaList.map(item => (
-              <JobCard key={item.id} jobTitle={item.jobTitle} type={item.type} setup={item.setup} location={item.location} description={item.description}/>
+              <JobCard key={item.id} jobTitle={item.jobTitle} type={item.type} setup={item.setup} location={item.location} description={item.description} applicationLink={item.applicationLink}/>
             ))}
           </div>
         )}
         {currentTab === 4 && (
           <div className="job-list">
             {deList.map(item => (
-              <JobCard key={item.id} jobTitle={item.jobTitle} type={item.type} setup={item.setup} location={item.location} description={item.description}/>
+              <JobCard key={item.id} jobTitle={item.jobTitle} type={item.type} setup={item.setup} location={item.location} description={item.description} applicationLink={item.applicationLink}/>
             ))}
           </div>
         )}

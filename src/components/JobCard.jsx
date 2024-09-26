@@ -1,8 +1,9 @@
 import React from 'react'
 import Button from './Button'
 import IconView from '../assets/icon-view.svg'
+import ButtonLink from './ButtonLink'
 
-const JobCard = ({jobTitle, description, type, setup, location}) => {
+const JobCard = ({jobTitle, description, type, setup, location, applicationLink}) => {
   return (
     <div className='card-job'>
       <p className='job-title'>{jobTitle}</p>
@@ -12,7 +13,7 @@ const JobCard = ({jobTitle, description, type, setup, location}) => {
         <p className='detail-item'>{location}</p>
       </div>
       <p className='job-description'>{description}</p>
-      <Button btnTitle='Learn More' classList='btn btn-primary' btnicon={IconView}/>
+      <ButtonLink btnTitle='Learn More' applicationLink={applicationLink} classList='btn btn-primary btn-link' btnicon={IconView}/>
     </div>
   )
 }
