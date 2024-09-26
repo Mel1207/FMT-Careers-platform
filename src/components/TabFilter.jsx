@@ -11,7 +11,7 @@ const TabFilter = () => {
   const [deList, setDeList] = useState([])
 
   // HOOKS CALL
-  const { jobPost } = useGetJobPost()
+  const { jobPost, getJobPost } = useGetJobPost()
 
   const changeTab = (id) => {
     setCurrentTab(id)
@@ -25,6 +25,7 @@ const TabFilter = () => {
   const filterQualityAssurance = () => {
     const newList = jobPost.filter(item => item.category === 'quality-assurance')
     setQaList(newList)
+
   }
 
   const filterDesigners = () => {
