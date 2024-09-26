@@ -18,12 +18,14 @@ export const useGetJobPost = () => {
     //   console.log(error)
     // }
 
-    fetch('http://localhost:8000/jobPost').then(res => res.json()).then(data => setJobPost(data))
+    fetch('http://localhost:8000/jobPost')
+      .then(res => res.json())
+      .then(data => setJobPost(data))
   }
 
   useEffect(() => {
     getJobPost()
-  }, [])
+  }, [jobPost])
 
   return {
     jobPost, getJobPost
