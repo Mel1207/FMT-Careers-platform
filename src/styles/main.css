@@ -434,6 +434,12 @@ main {
   gap: 15px;
 }
 
+.page-label {
+  text-align: center;
+  margin-top: 50px;
+  display: block;
+}
+
 .header {
   padding: 105px 20px;
 }

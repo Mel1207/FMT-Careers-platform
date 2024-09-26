@@ -5,13 +5,16 @@ import Button from '../components/Button'
 import Modal from '../components/Modal'
 import IconRemove from '../assets/icon-remove.svg'
 import { useGlobalStore } from '../store/globalStore'
-import { jobPost } from '../constants'
-// import { useGetJobPost } from '../hooks/useGetJobPost'
+// import { jobPost } from '../constants'
+import { useDeleteJobPost } from '../hooks/useDeleteJobPost'
+import { useGetJobPost } from '../hooks/useGetJobPost'
+
 
 
 const PageAdmin = () => {
   // HOOKS CALL
-  // const { jobPost, getJobPost } = useGetJobPost()
+  const { jobPost, getJobPost } = useGetJobPost()
+  const { deleteJobPost } = useDeleteJobPost()
 
   // GLOBAL STATE
   const { isModalOpen, openModal } = useGlobalStore()
@@ -19,6 +22,8 @@ const PageAdmin = () => {
   // FUNCTIONS
   const handleDeleteJob = (id) => {
     console.log(`your target doc is ${id}`)
+    deleteJobPost(id)
+    getJobPost()
   } 
   return (
     <>
@@ -50,15 +55,6 @@ const PageAdmin = () => {
               ))}
             </div>
           </div>
-          {/* <div className='test'>
-            <h1>test</h1>
-            {jobPost.map(item => (
-              <div key={item.id}>
-                <p>{item.jobTitle}</p>
-                <p>{item.category}</p>
-              </div>
-            ))}
-          </div>   */}
         </div>
       </main>
       {isModalOpen && <Modal modalTitle='New Job Post'/>}
