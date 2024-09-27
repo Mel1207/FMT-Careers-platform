@@ -397,6 +397,12 @@
   height: 140px;
   font-family: inherit;
 }
+.modal .input-required {
+  border: 1px solid #FF3969 !important;
+}
+.modal .label-required {
+  color: #FF3969 !important;
+}
 .modal .modal-footer {
   display: flex;
   justify-content: space-between;
