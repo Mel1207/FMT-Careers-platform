@@ -24,9 +24,21 @@ const Modal = ({modalTitle}) => {
 
   // FUNCTION
   const handleSubmit = () => {
-    if(!jobTitle && !location && !description) {
+    if(!jobTitle) {
       setRequired(true)
       console.log('please add title')
+      return
+    } 
+
+    if(!location) {
+      setRequired(true)
+      console.log('Please add location')
+      return
+    }
+
+    if(!description) {
+      setRequired(true)
+      console.log('Please add description')
       return
     }
 
