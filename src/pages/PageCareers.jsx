@@ -40,7 +40,7 @@ const PageCareers = () => {
           <div className='footer-top'>
             <h3>Contact Us</h3>
             <p className='contact-info'><img src={iconEmail} alt="Email" />hello@fmt.techno</p>
-            <p className='contact-info'><img src={iconPhone} alt="Phone" />+1 (510) 680-3749</p>
+            <p className='contact-info'><img src={iconPhone} alt="Phone" />+1 (111) 223-4500</p>
           </div>
           <div className='footer-bottom'>
             <div>
