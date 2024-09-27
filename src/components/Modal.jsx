@@ -15,6 +15,7 @@ const Modal = ({modalTitle}) => {
   const [setup, setSetup] = useState('remote')
   const [applicationLink, setApplicationLink] = useState('')
   const [description, setDescription] = useState('')
+  const [required, setRequired] = useState(false)
 
   // GLOBAL STATE
   const { closeModal } = useGlobalStore()
@@ -23,6 +24,12 @@ const Modal = ({modalTitle}) => {
 
   // FUNCTION
   const handleSubmit = () => {
+    if(!jobTitle && !location && !description) {
+      setRequired(true)
+      console.log('please add title')
+      return
+    }
+
     addJobPost({
       jobTitle,
       category,
@@ -45,11 +52,12 @@ const Modal = ({modalTitle}) => {
         </div>
         <div className="modal-content">
           <div className="form-group">
-            <label>Job Title</label>
+            <label className={required ? 'label-required' : ''}>Job Title</label>
             <input 
               type="text" 
               placeholder='Enter job title' 
               onChange={e => setJobTitle(e.target.value)}
+              className={required ? 'input-required' : ''}
             />
           </div>
           <div className='d-flex'>
@@ -73,11 +81,12 @@ const Modal = ({modalTitle}) => {
             </div>
           </div>
           <div className="form-group">
-            <label>Location</label>
+            <label className={required ? 'label-required' : ''}>Location</label>
             <input 
               type="text" 
               placeholder='Enter location' 
               onChange={e => setLocation(e.target.value)}
+              className={required ? 'input-required' : ''}
             />
           </div>
           <div className="form-group">
@@ -100,8 +109,8 @@ const Modal = ({modalTitle}) => {
             <img src={iconArrowDown} alt="Chevron down" className='arrow-down'/>
           </div>
           <div className="form-group">
-            <label>Description</label>
-            <textarea placeholder='Enter description' onChange={e => setDescription(e.target.value)}></textarea>
+            <label className={required ? 'label-required' : ''}>Description</label>
+            <textarea placeholder='Enter description' onChange={e => setDescription(e.target.value)} className={required ? 'input-required' : ''}></textarea>
           </div>
         </div>
         <div className="modal-footer" >
