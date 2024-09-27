@@ -56,7 +56,7 @@ export const accItems = [
   {
     id: 3,
     accTitle: 'How do you manage timezone differences?',
-    accContent: 'At First Mate Technologies, we recognize the critical role of synchronization in our project workflow. Once a project begins, we actively work to identify and set overlapping working hours that accommodate both our clients and our team.',
+    accContent: 'At FMT, we recognize the critical role of synchronization in our project workflow. Once a project begins, we actively work to identify and set overlapping working hours that accommodate both our clients and our team.',
     isOpen: false
   },
 ]
