@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import { Route, Routes, useLocation } from "react-router-dom"
 import Navbar from "./components/Navbar"
 import PageCareers from "./pages/PageCareers"
@@ -6,10 +7,9 @@ import PageAbout from "./pages/PageAbout"
 import PageAdmin from "./pages/PageAdmin"
 import NavbarAdmin from "./components/NavbarAdmin"
 
-
 function App() {
   const location = useLocation()
-  
+
   return (  
     <>
       {location.pathname !== '/main-admin' ? <Navbar /> : <NavbarAdmin />}

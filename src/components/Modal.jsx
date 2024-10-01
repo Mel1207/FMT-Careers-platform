@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import iconClose from '../assets/icon-close.svg'
 import Button from './Button'
 import iconArrowDown from '../assets/icon-arrow-down.svg'
@@ -51,8 +51,8 @@ const Modal = ({modalTitle}) => {
       applicationLink,
       description
     })
-    closeModal()
     getJobPost()
+    closeModal()
   }
   
   return (
